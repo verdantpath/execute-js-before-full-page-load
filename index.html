@@ -4,8 +4,13 @@
 <title>Execute js before full page load</title>
 <meta charset="utf-8" />
 <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/JavaScript">
+  jQuery(document).ready(function() { //DOM not loaded, must use ready ecs-event
+    alert(jQuery('p').text());
+  });
+</script>
 </head>
 <body>
-
+<p>The DOM is ready!</p>
 </body>
 </html>
